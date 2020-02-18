@@ -1,0 +1,2 @@
+# inomady
+Project for inomady
