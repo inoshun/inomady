@@ -35,7 +35,10 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    '@/assets/css/style.scss',
+    '@/assets/css/common.scss'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -51,7 +54,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ["@nuxtjs/style-resources"],
   /*
    ** Build configuration
    */
@@ -59,6 +62,11 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    styleResources: {
+      scss: [
+        './assets/variables.scss'
+      ]
+    },
     extend(config, ctx) {
       config.resolve.alias["vue"] = "vue/dist/vue.common";
     }
