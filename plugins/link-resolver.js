@@ -7,5 +7,9 @@ export default function(doc) {
     return "/" + doc.uid;
   }
 
+  if (doc.type === "category" || doc.type === "child_category") {
+    return "/category/" + doc.uid;
+  }
+
   return "/not-found";
 }

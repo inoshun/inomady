@@ -1,27 +1,26 @@
 <template>
-  <BlogListLayout :blogPosts="blogPosts" />
+  <div>
+    <BlogArticle :post="post" />
+  </div>
 </template>
 
 <script>
 import Prismic from "prismic-javascript";
 import PrismicConfig from "~/prismic.config.js";
-import BlogListLayout from "~/components/pages/blog-list/BlogListLayout";
+import BlogArticle from "~/components/pages/article/BlogArticle";
 
 export default {
   components: {
-    BlogListLayout
+    BlogArticle
   },
-  async asyncData({ context, error, req }) {
+  async asyncData({ params, error, req }) {
     try {
       const api = await Prismic.getApi(PrismicConfig.apiEndpoint, { req });
 
-      const blogPosts = await api.query(
-        Prismic.Predicates.at("document.type", "blog_post"),
-        { orderings: "[my.blog_post.date desc]", pageSize: 10 }
-      );
+      const post = await api.getByUID("blog_post", params.uid);
 
       return {
-        blogPosts,
+        post: post
       };
     } catch (e) {
       error({ statusCode: 404, message: "Page not found" });

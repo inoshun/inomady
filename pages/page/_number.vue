@@ -11,13 +11,13 @@ export default {
   components: {
     BlogListLayout
   },
-  async asyncData({ context, error, req }) {
+  async asyncData({ params, error, req }) {
     try {
       const api = await Prismic.getApi(PrismicConfig.apiEndpoint, { req });
 
       const blogPosts = await api.query(
         Prismic.Predicates.at("document.type", "blog_post"),
-        { orderings: "[my.blog_post.date desc]", pageSize: 10 }
+        { orderings: "[my.blog_post.date desc]", pageSize: 10, page: params.number }
       );
 
       return {

@@ -35,17 +35,16 @@ export default {
   /*
    ** Global CSS
    */
-  css: [
-    '@/assets/css/style.scss',
-    '@/assets/css/common.scss'
-  ],
+  css: ["@/assets/style/style.scss", "@/assets/style/common.scss"],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
     "~/plugins/link-resolver.js",
     "~/plugins/html-serializer.js",
-    "~/plugins/prismic-vue.js"
+    "~/plugins/prismic-vue.js",
+    "~/plugins/set-min-height.client.js",
+    "~/plugins/fit-img.js"
   ],
   /*
    ** Nuxt.js dev-modules
@@ -55,6 +54,9 @@ export default {
    ** Nuxt.js modules
    */
   modules: ["@nuxtjs/style-resources"],
+  styleResources: {
+    scss: ["@/assets/style/variables.scss"]
+  },
   /*
    ** Build configuration
    */
@@ -62,11 +64,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    styleResources: {
-      scss: [
-        './assets/variables.scss'
-      ]
-    },
     extend(config, ctx) {
       config.resolve.alias["vue"] = "vue/dist/vue.common";
     }
