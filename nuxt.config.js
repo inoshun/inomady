@@ -13,7 +13,7 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || ""
+        content: "当ブログ「inomady」では、主にヨーロッパを旅しながらリモートで働く僕が、現地での体験や働き方など様々なテーマで記事を書いています。ヨーロッパでの生活やリモートワークに興味のある方はぜひ読んでみてください。"
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],

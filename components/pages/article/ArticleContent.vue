@@ -53,8 +53,8 @@ export default {
     margin-bottom: 20px;
     text-decoration: underline;
     font-style: italic;
-    font-size: 26px;
-    font-weight: 500;
+    font-size: 28px;
+    font-weight: bold;
   }
   h3 {
     margin-top: 30px;
