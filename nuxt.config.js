@@ -67,5 +67,12 @@ export default {
     extend(config, ctx) {
       config.resolve.alias["vue"] = "vue/dist/vue.common";
     }
-  }
+  },
+  /*
+  ** 301redirect
+   */
+  serverMiddleware: [
+    '~/redirect-to-inoshunnomad.com.js'
+  ]
+
 };
