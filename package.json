@@ -15,7 +15,8 @@
     "nuxt": "^2.0.0",
     "object-fit-images": "^3.2.4",
     "prismic-javascript": "^2.1.5",
-    "prismic-vue": "git+https://github.com/prismicio/prismic-vue.git#nuxt"
+    "prismic-vue": "git+https://github.com/prismicio/prismic-vue.git#nuxt",
+    "redirect-ssl": "^2.0.0"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.0.0",

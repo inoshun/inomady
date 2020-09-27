@@ -72,7 +72,8 @@ export default {
   ** 301redirect
    */
   serverMiddleware: [
-    '~/redirect-to-inoshunnomad.com.js'
+    '~/redirect-to-inoshunnomad.com.js',
+    'redirect-ssl'
   ]
 
 };
