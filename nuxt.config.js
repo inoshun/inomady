@@ -16,7 +16,7 @@ export default {
         content: "当ブログ「inomady」では、主にヨーロッパを旅しながらリモートで働く僕が、現地での体験や働き方など様々なテーマで記事を書いています。ヨーロッパでの生活やリモートワークに興味のある方はぜひ読んでみてください。"
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
     script: [
       {
         innerHTML:
@@ -31,7 +31,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: "#fff" },
+  loading: false,
   /*
    ** Global CSS
    */
